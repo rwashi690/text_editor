@@ -9,6 +9,7 @@ const { InjectManifest } = require('workbox-webpack-plugin');
 module.exports = () => {
   return {
     mode: 'development',
+    target: "node",
     // Entry point for files
     entry: {
       main: './src/js/index.js',
@@ -23,7 +24,7 @@ module.exports = () => {
       // Webpack plugin that generates our html file and injects our bundles. 
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Contact Cards'
+        title: 'Text Editor'
       }),
      
       // Injects our custom service worker
@@ -36,9 +37,9 @@ module.exports = () => {
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: 'Contact Cards',
-        short_name: 'Contact',
-        description: 'Never forget your contacts!',
+        name: 'text_editor',
+        short_name: 'T-E',
+        description: 'Have a text editor always on hand',
         background_color: '#225ca3',
         theme_color: '#225ca3',
         start_url: '/',
