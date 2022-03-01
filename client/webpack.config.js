@@ -39,7 +39,7 @@ module.exports = () => {
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: "Text Editor",
+        name: "Just Another Text Editor",
         short_name: "J.A.T.E",
         description: "Have a text editor always on hand",
         background_color: "#225ca3",
